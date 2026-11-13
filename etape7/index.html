@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="table_container">
+        <!-- Bonus Feature 1: Search -->
+        <div id="search_container" style="margin-bottom: 15px;">
+            <label for="search_input" style="font-weight: bold;">Filtrer (Nom):</label>
+            <input type="text" id="search_input" placeholder="Rechercher..." onkeyup="filterTable()" class="form_field" />
+        </div>
+
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field" />
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_prenom" class="form_field" />
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field" />
+            </div>
+            <button onclick="doNewData()" class="btn-add">Ajouter</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col_number">N°</th>
+                    <th class="col_text">Nom</th>
+                    <th class="col_text">Prénom</th>
+                    <th class="col_number">Points</th>
+                    <th class="col_chkbox">Select</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p> <!-- Bonus Feature 2: Displays average points -->
+            <p id="p3">Total point(s)= 0</p>
+        </div>
+
+        <div id="container_btn">
+            <button onclick="consoleTableau()" class="btn-consol">Console Tableau</button>
+            <button onclick="deleteRow()" class="btn-del">Supprimer</button>
+            <button onclick="sortRowsByPoints()" class="btn-sort">Trier par Points</button> <!-- Bonus Feature 3 -->
+        </div>
+    </div>
+</body>
+</html>

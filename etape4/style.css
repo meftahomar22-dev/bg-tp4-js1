@@ -1,0 +1,47 @@
+#table_container {
+    width: 100%;
+    margin: 30px auto;
+    font-family: Calibri, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #888;
+    padding: 8px 12px;
+}
+
+th {
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+}
+
+.col_number {
+    text-align: center;
+    width: 10%;
+}
+
+.col_text {
+    text-align: left;
+    width: 35%;
+}
+
+.col_chkbox {
+    text-align: center;
+    width: 10%;
+}
+
+#container_summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
